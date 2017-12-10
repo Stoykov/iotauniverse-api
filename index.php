@@ -10,11 +10,9 @@ $dotenv = new Dotenv\Dotenv(__DIR__);
 $dotenv->load();
 
 // Bootstrap middlewares
-//$middlewares = new \Api\Middleware\MiddlewareRegister();
+//$middlewares = new \Iota\Middleware\MiddlewareRegister();
 
-//$middlewares->register( new \Api\Middleware\SensitiveMiddleware() ); // Removes all sensitive data from response
-//$middlewares->register( new \Api\Middleware\LogMiddleware() ); // Logs actions and responses
-//$middlewares->register( new \Api\Middleware\AlertMiddleware() ); // Checks if there is something fishy with response and alerts support staff
+//$middlewares->register( new \Iota\Middleware\SomeMiddleware() ); // Removes all sensitive data from response
 
 $domain = $_SERVER['HTTP_HOST'];
 $action = $_GET['action'];
@@ -40,20 +38,6 @@ switch ($uri) {
         break;
 }
 
-// Test alert system
-/*
-$response = new \Api\Http\Response();
-$response->setStatusCode(400);
-$response->setBody([
-        "test" => "Testing alert system",
-        "token" => "uga buga",
-        "call_url" => "https://yourass",
-        "call_data" => "i'm fucking salty today"
-    ]);
-$response->setError('MOAR ERRORS');
-
-$action = "placebet";
-*/
 // Process middlewears before sending the response to the client
 //$response = $middlewares->process($response, $action);
 
