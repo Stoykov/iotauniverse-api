@@ -32,9 +32,9 @@ class IotaNode
         $this->milestones   = $data->milestones;
         $this->tips         = $data->tips;
         $this->ttr          = $data->transactionsToRequest;
-        $this->neighbours   = $data->neighbours;
-        $this->appName      = $data->appName;
-        $this->version      = $data->appVersion;
+        $this->neighbours   = $data->neighbors;
+        $this->appName      = $data->app_name;
+        $this->version      = $data->version;
         $this->cpu          = $data->cpu_load;
 
         $this->lastUpdate   = $data->last_update;
