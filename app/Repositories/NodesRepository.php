@@ -6,19 +6,19 @@ use Iota\Models\IotaNode;
 class NodesRepository
 {
     /**
-     * [$cache description]
+     * Should we use cache?
      * @var boolean
      */
     private $cache = false;
 
     /**
-     * [$file description]
+     * Storage file name
      * @var string
      */
     private $file = '';
 
     /**
-     * [$nodes description]
+     * List of available nodes
      * @var array
      */
     private $nodes = [];
